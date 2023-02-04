@@ -2,7 +2,7 @@ a {
     text-decoration: none;
 }
 body {
-    background-image: url(/images/background.png),url(/images/logo2.svg) ;
+    background-image: url(../images/background.png),url(../images/logo2.svg) ;
     background-size: cover, 299px;
     background-attachment: fixed, scroll;
     background-repeat: no-repeat;
