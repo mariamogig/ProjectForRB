@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+}
+body {
+    background-image: url(/images/background.png),url(/images/logo2.svg) ;
+    background-size: cover, 299px;
+    background-attachment: fixed, scroll;
+    background-repeat: no-repeat;
+    background-position-x: center, 62%;
+    background-position-y: center, 62%;
+}
+.container1 {
+    height: 1080px;
+}
+.logo {
+    width: 236px;
+    height: 38px;
+    margin: 25px 0 0 70px;
+}
+.line {
+    height: 2px;
+    width: auto;
+    background-color: #1A1A1A; 
+    margin:0 70px 0 70px;
+}
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+.mainButton {
+    background-color: #1A1A1A;
+    width: 464px;
+    height: 60px;
+    color: white;
+    cursor:pointer;
+    text-align: center;
+    border-radius: 8px;
+}
+.mainButton h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
