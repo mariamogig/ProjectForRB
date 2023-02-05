@@ -2,6 +2,9 @@
     font-family: myFont;
     src: url(../assets/HelveticaNeue.ttc);
   }
+* {
+    box-sizing: border-box;
+  }
 a {
     text-decoration: none;
 }
@@ -30,7 +33,7 @@ body,html {
     margin:0 70px 0 70px;
 }
 .button_container {
-    display: flex;
+   display: flex;
    align-items: center;
    justify-content: center;
    text-align: center;
@@ -44,8 +47,13 @@ body,html {
     height: 60px;
     color: white;
     cursor:pointer;
-    text-align: center;
     border-radius: 8px;
+}
+.mainButtonMother {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
 }
 .mainButton h2 {
     font-size: 20px;
@@ -55,38 +63,41 @@ body,html {
 /* Page N1 */
 .leftContainer {
     float:left;
-    background-color: lightgray;
+    background-color: #f5f2f2;
     width: 60%;
-    height: 100%;
+    min-height: 100%;
     margin: 0;
 }
 .section_1 {
       display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
 }
 .rightContainer {
     float:right;
-    background-color: darkgray;
     width: 40%;
-    height: 100%;
+    min-height: 100%;
     margin: 0;
 }
 .icon {
-    width: 100%;
-    max-width: 40px;
-    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 45px 61px 0 48px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.arrow {
-    width: 20px;
-}
+
 .pageTitle {
-    display: inline-block;
-    font-size: 24px;
+    font-size: 0.6vw;
     font-style: bold;
-    font-family: myFont;
+    font-family: myFont; 
+    margin-right: 650px;
+  
 }
-.page_counter {
-    display: inline-block;
-}
+
 .counted {
     font-size: 20px;
 }
@@ -111,15 +122,98 @@ body,html {
     border-color: #BCBCBC;
     border-radius: 4px;
     border-radius: 1px solid #FFFFFF;
-    
-}
-.nameBox {
-    display: inline-block;
-}
-.lastnameBox {
-    display: inline-block;
 }
 .yourName {
     font-size: 16px;
     line-height: 21px;
+}
+
+
+.nameHolder {
+    float: left;
+    z-index: 10;
+    position: relative;
+    margin-right: 56px;
+}
+.lastnameHolder {
+    position: relative;
+}
+.formInfo {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: myFont;
+}
+.inputLable {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: myFont;
+    font-style: bold;
+}
+input {
+    width: 371px;
+    height: 48px;
+    border: solid #BCBCBC 1px;
+    margin-top: 8px;
+}
+.fullName {
+    margin: 77px 0 0 150px;
+}
+.uploadPic {
+    font-size: 16px;
+    font-family: myFont;
+    font-weight: 500;
+}
+.picB {
+    background-color: #0E80BF;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+    width: 107px;
+    height: 27px;
+    margin-left: 19px;
+    font-size: 14px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;    
+}
+.buttonMother {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+    align-items: center;
+    margin-left: 150px;
+}
+.aboutMeForm {
+    margin: 54px 0 0 150px;
+}
+.aboutMeForm label {
+font-size: 16px;
+font-weight: 500;
+font-family: myFont;
+
+}
+.email_mobile {
+    margin: 33px 0 0 150px;
+}
+textarea {
+    border: solid #BCBCBC 1px;
+    resize:none;
+    margin-top: 8px;
+}
+.next {
+    background-color: #6B40E3;
+    width: 151px;
+    height: 48px;
+    color: white;
+    font-family: myFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer; 
+    float: right;
+    margin: 160px 150px 79px 0;
+}
+.flexiForm {
+    
 }
