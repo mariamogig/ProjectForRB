@@ -2,20 +2,39 @@
     font-family: myFont;
     src: url(../assets/HelveticaNeue.ttc);
   }
- 
+  @media screen and (max-width: 800px) {
+    .mainButtonMother {
+        width: 220px;
+    }
+    .mainButton h2{
+        padding: 2px;
+    }
+    .logo {
+       width: auto;
+    }
+   } 
+
 * {
     box-sizing: border-box;
   }
 a {
     text-decoration: none;
 }
-body,html {
-        height: 100%;
-        margin: 0;
-        font-family: myFont;
-    }
-.page2containers {
+
+html {
+    height: 100%;
+    margin: 0;
+    font-family: myFont;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: myFont;
+}
+
+.flexHeight100 {
         display: flex;
+        height: 100%;
     }
 .container {
     background-image: url(../images/background.png),url(../images/logo2.svg) ;
@@ -64,6 +83,7 @@ body,html {
     font-size: 20px;
     font-weight: 500;
     font-family: myFont;
+    color: white;
 }
 /* Page N1 */
 .leftContainer {
@@ -72,18 +92,15 @@ body,html {
     min-height: 100%;
     margin: 0;
 }
-.section_1 {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 150px;
-}
-
-.rightContainer {
+.resultsContainer {
     width: 43%;
     min-height: 100%;
     margin: 0;
 }
-
+.section_1 {
+    display: flex;
+    margin-right: 150px;
+}
 .icon {
     width: 40px;
     height: 40px;
@@ -93,6 +110,24 @@ body,html {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.iconBox {
+    width: 150px;
+}
+.titleBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 790px;
+    width: 100%;
+}
+.titleBox h1 {
+    align-self:flex-end;
+    margin-bottom:0px;
+}
+.titleBox p {
+    align-self:flex-end;
+    margin-bottom:0px;
 }
 
 .pageTitle {
@@ -101,7 +136,7 @@ body,html {
     font-family: myFont; 
     margin-right: 650px;
     display: flex;
-  
+    align-items: center;
 }
 .page_counter {
     font-size: 20px;
@@ -119,22 +154,37 @@ body,html {
     color: rgba(0, 0, 0, 0.6);
     font-family: myFont;
 }
+.width_798px {
+    width: 798px;
+}
+
 .inputLable {
     font-size: 16px;
     font-weight: 500;
     font-family: myFont;
     font-style: bold;
 }
-.aboutMeInfo {
-    max-width: 798px;
-    width: 100%;
-}
+
 .infoInputs input {
-    max-width: 798px;
-    width: 100%;
+    width: 798px;
     height: 48px;
     border: solid #BCBCBC 1px;
     margin-top: 8px;
+}
+textarea {
+    width: 798px;
+    height: 103px;
+    border: solid #BCBCBC 1px;
+    margin-top: 8px;
+}
+.textarea2 {
+    height: 179px;
+}
+.textarea1 {
+    height: 123px;
+}
+.infoInputs {
+    margin-bottom: ;
 }
 .uploadPic {
     font-size: 16px;
@@ -157,71 +207,37 @@ body,html {
 }
 .buttonMother {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-start;    
     align-items: center;
-    margin-left: 150px;
-}
-.aboutMeForm {
-    margin: 54px 0 0 150px;
-}
-.aboutMeForm label {
-font-size: 16px;
-font-weight: 500;
-font-family: myFont;
 
 }
-.infoInputs {
-    margin: 33px 0 0 150px;
-}
-.name, .surname {
-    margin: 33px 0 0 150px;
-    display: inline-block;
-    padding: 0;
-    margin: 106px 56px 0 150px;
 
+
+.spaceBetween {
+    width: 798px;
+    display: flex;
+    justify-content: space-between;
 }
-.name input {
-    max-width: 398px;
-    width: 100%;
+.shortInput input, select {
+    width:  371px;
     height: 48px;
     border: solid #BCBCBC 1px;
     border-radius: 4px;
-    margin-top: 8px;
     font-size: 16px;
     font-weight: 500;
     line-height: 21px; 
-}
-.surname input {
-    max-width: 398px;
-    width: 100%;
-    height: 48px;
-    border: solid #BCBCBC 1px;
-    border-radius: 4px;
     margin-top: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 21px;   
-    }
-
-
+}
+.shortInput {
+    margin: 0;
+}
 textarea {
     border: solid #BCBCBC 1px;
     resize:none;
-    margin-top: 8px;
 }
-.next {
-    background-color: #6B40E3;
-    width: 151px;
-    height: 48px;
-    color: white;
-    font-family: myFont;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor:pointer; 
-    float: right;
-    margin: 160px 150px 79px 0;
+.spaceBetween {
+    margin-bottom: 33px;
 }
 .me {
     width: 246px;
@@ -284,24 +300,40 @@ textarea {
     background-color: #C1C1C1;
     height: 2px;
     width: auto;
-    margin: 58px 150px 0 150px;
+    margin: 53px 0 45px 0;
 }
-.page_2_buttons {
+.next_back {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    margin-top: 180px;
+
 }
-.but1, .but2 {
+.backButton, .nextButton {
     background-color: #6B40E3;
     width: 151px;
     height: 48px;
     color: white;
     font-family: myFont;
     cursor:pointer; 
-    margin: 0 150px 65px 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    border: none;
+}
+.nextButton1 {
+    background-color: #6B40E3;
+    width: 151px;
+    height: 48px;
+    color: white;
+    font-family: myFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer; 
+    float: right;
+    border: none;
+    margin-top: 174px;
 }
 .addExperience {
     background-color: #62A1EB;
@@ -313,12 +345,11 @@ textarea {
     font-weight: 500;
     color: white;
     cursor:pointer; 
-    margin: 45px 150px 65px 150px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.rightSection_1 {
+.result_section_1 {
     display: flex;
 }
 .line4 {
@@ -326,12 +357,31 @@ textarea {
     height: 2px;
     width: auto;
 }
-.rightSection_2 {
-    margin: 68px 80px 0 80px;
+.result_section_2 {
+    margin: 19px 80px 0 80px;
 }
-.rightSection_2 p {
-
-}
-.rightSection_2 h2 {
+.result_section_2 h2 {
     color: #F93B1D;
+}
+.resultDate {
+    color: #909090;
+    font-size: 16px;
+    font-weight: 400;
+}
+.section_2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 77px;
+}
+.email_icon {
+    width: 16px;
+    color: gray;
+    margin-right: 11px;
+}
+.phone_icon {
+    width: 16px;
+    margin-right: 11px;
+ }
+.displayFlex {
+    display: flex;
 }

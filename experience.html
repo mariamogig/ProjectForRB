@@ -7,63 +7,71 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>გამოცდილება</title>
 </head>
-<body>
-    <div class="page2containers">
+<body >
+    <div class="flexHeight100">
         <div class="leftContainer">
             <div class="section_1">
-                <div class="icon" onclick="location.href= 'page_1.html'">
-                    <img class="arrow" src="images/vector.png" alt="arrow">
-                 </div>
-                    <h1> განათლება</h1>
-                    <p> 3/3</p>
+                <div class="iconBox">
+                    <div class="icon" onclick="location.href= 'personal_info.html'">
+                        <img class="arrow" src="images/vector.png" alt="arrow">
+                     </div>
+                </div>
+                <div class="titleBox">
+                        <h1> გამოცდილება</h1>
+                        <p> 2/3</p>
+                </div>
             </div>
             <div class="line2"></div>
-            <div class="infoInputs">
+            <div class="section_2">
+                <div class="width_798px">
                 <form action="">
-                   <label class="inputLable" for="position">სასწავლებელი</label><br>
-                   <input type="text" id="position" name="position" placeholder="სასწავლებელი"><br>
-                   <p class="formInfo"> მინიმუმ 2 ასო</p>
-                </form>
-            </div>
-            
-            <div class="test">
-                <div class="test1">
-                    <form action="">
-                        <label for="date"> დაწყების რიცხვი</label> <br>
-                        <input type="date" id="date">
-                    </form>
-                 </div>
-                 <div class="test2">
-                    <form action="">
+                    <div class="infoInputs">
+                        <label class="inputLable" for="school">თანამდებობა</label><br>
+                        <input type="text" id="shcool" name="school" placeholder="დიზაინერი, დეველოპერი ა.შ"><br>
+                        <p class="formInfo"> მინიმუმ 2 ასო</p>
+                    </div>
+                    <div class="infoInputs">
+                        <label class="inputLable" for="school">დამსაქმებელი</label><br>
+                        <input type="text" id="shcool" name="school" placeholder="დამსაქმებელი"><br>
+                        <p class="formInfo"> მინიმუმ 2 ასო</p>
+                    </div>
+                 <div class="spaceBetween">
+                    <div class="shortInput">
+                        <label for="degree"> დაწყების რიცხვი</label> <br>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="shortInput">
                         <label for="date"> დამთავრების რიცხვი</label> <br>
-                        <input type="date" id="date">
-                    </form>
-                 </div>
-            </div>
-            <div class="aboutMeForm">
-                <form class="flexiForm" action="">
+                        <input type="date" name="date" id="date">
+                    </div>
+                </div>  
+                <div class="infoInputs">
                     <label for="aboutMe"> აღწერა</label> <br>
-                    <textarea class="aboutMeInfo" rows="" id="subject" name="subject" placeholder="განათლების აღწერა"></textarea>
+                    <textarea class="textarea1" id="subject" name="subject" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+            </div>
+                    <div class="line3"></div>
+                    <div class="addExperience">
+                        <p>სხვა სასწავლებლის დამატება</p>
+                    </div>
                 </form>
-            </div>
-            <div class="line3"></div>
-            <div class="addExperience">
-                <p>სხვა სასწავლებლის დამატება</p>
-            </div>
-            <div class="page_2_buttons">
-                    <p class="but1"  onclick="location.href= 'page_1.html'"> უკან</p>
-                    <p class="but2"  onclick="location.href= '#'"> შემდეგი</p>
+                    <div class="next_back">
+                        <button class="backButton" onclick="location.href= 'personal_info.html'">უკან</button>
+                       <button class="nextButton" onclick="location.href='education.html'">შემდეგი</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="rightContainer">
-            <div class="rightSection_1">
+        <div class="resultsContainer">
+            <div class="result_section_1">
                 <div class="infoResult">
                     <h1> ანზორ მუმლაძე</h1>
-                        <div>
+                        <div class="displayFlex">
+                            <img class="email_icon" src="images/mail.svg" alt="">
                             <img src="\" alt="">
                             <p class="emailResult">  something@gmail.com</p>
                         </div>
-                        <div>
+                        <div class="displayFlex">
+                            <img class="phone_icon" src="images/phone.svg" alt="">
                             <img src="" alt="">
                             <p class="phoneResult"> +99559888888</p>
                         </div>
@@ -75,7 +83,7 @@
                          <img class="me" src="images/anzor.jpg" alt="prinsezaa">
                     </div>        
             </div>
-            <div class="rightSection_2">
+            <div class="result_section_2">
                     <div class="line4"></div>
                  <h2>გამოცდილება</h2>
                     <h3> React developer </h3>
