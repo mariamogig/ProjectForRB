@@ -228,6 +228,7 @@ textarea {
     font-weight: 500;
     line-height: 21px; 
     margin-top: 8px;
+    display: inline-block;
 }
 .shortInput {
     margin: 0;
@@ -302,7 +303,7 @@ textarea {
     width: auto;
     margin: 53px 0 45px 0;
 }
-.next_back {
+.navigation-button {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -351,6 +352,7 @@ textarea {
 }
 .result_section_1 {
     display: flex;
+    justify-content: space-between;
 }
 .line4 {
     background-color: #C1C1C1;
@@ -384,4 +386,36 @@ textarea {
  }
 .displayFlex {
     display: flex;
+}
+.validation-error input {
+    border:2px red solid;
+}
+.validation-error {
+    color: red;
+}
+.validation-done {
+    color: black;
+}
+.errorSign {
+    display: none;
+    width: 21px;
+    float: right;
+    vertical-align: middle;
+    border: green solid 1px;
+}
+.mari {
+    border: solid 1px yellow;
+    display: inline-block;
+}
+.validation-error .errorSign {
+    display: block;
+}
+.validation-done input{
+    border: 2px lightgreen solid;
+}
+.validation-error textarea{
+    border: red solid 2px;
+}
+.validation-done textarea {
+    border: lightgreen solid 2px;
 }

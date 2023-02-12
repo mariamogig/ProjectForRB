@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>გამოცდილება</title>
+    <script src="script.js"> </script>
 </head>
 <body >
     <div class="flexHeight100">
         <div class="leftContainer">
             <div class="section_1">
                 <div class="iconBox">
-                    <div class="icon" onclick="location.href= 'personal_info.html'">
+                    <div class="icon" onclick="location.href= 'index.html'">
                         <img class="arrow" src="images/vector.png" alt="arrow">
                      </div>
                 </div>
@@ -26,38 +27,42 @@
                 <div class="width_798px">
                 <form action="">
                     <div class="infoInputs">
-                        <label class="inputLable" for="school">თანამდებობა</label><br>
-                        <input type="text" id="shcool" name="school" placeholder="დიზაინერი, დეველოპერი ა.შ"><br>
+                        <label class="inputLable" for="position">თანამდებობა</label><br>
+                        <input onkeyup="handleInput(this,'position')" type="text" id="position" name="position" placeholder="დიზაინერი, დეველოპერი ა.შ"><br>
+                        <img class="errorSign" src="images/error.svg" alt="">
                         <p class="formInfo"> მინიმუმ 2 ასო</p>
                     </div>
                     <div class="infoInputs">
-                        <label class="inputLable" for="school">დამსაქმებელი</label><br>
-                        <input type="text" id="shcool" name="school" placeholder="დამსაქმებელი"><br>
+                        <label class="inputLable" for="company">დამსაქმებელი</label><br>
+                        <input onkeyup="handleInput(this,'company')" type="text" id="company" name="company" placeholder="დამსაქმებელი"><br>
+                        <img class="errorSign" src="images/error.svg" alt="">
                         <p class="formInfo"> მინიმუმ 2 ასო</p>
                     </div>
                  <div class="spaceBetween">
                     <div class="shortInput">
-                        <label for="degree"> დაწყების რიცხვი</label> <br>
-                        <input type="date" name="date" id="date">
+                        <label for="start"> დაწყების რიცხვი</label> <br>
+                        <input onkeyup="handleInput(this,'start')" type="date" name="start" id="start">
                     </div>
                     <div class="shortInput">
-                        <label for="date"> დამთავრების რიცხვი</label> <br>
-                        <input type="date" name="date" id="date">
+                        <label for="end"> დამთავრების რიცხვი</label> <br>
+                        <input onkeyup="handleInput(this,'end')" type="date" name="end" id="end">
                     </div>
                 </div>  
                 <div class="infoInputs">
-                    <label for="aboutMe"> აღწერა</label> <br>
-                    <textarea class="textarea1" id="subject" name="subject" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                    <label for="description"> აღწერა</label> <br>
+                    <textarea onkeyup="handleInput(this,'description')" class="textarea1" id="description" name="description" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
+                    <img class="errorSign" src="images/error.svg" alt="">
             </div>
                     <div class="line3"></div>
                     <div class="addExperience">
                         <p>სხვა სასწავლებლის დამატება</p>
                     </div>
-                </form>
-                    <div class="next_back">
-                        <button class="backButton" onclick="location.href= 'personal_info.html'">უკან</button>
-                       <button class="nextButton" onclick="location.href='education.html'">შემდეგი</button>
+                    <div class="navigation-button">
+                        <button type="button" class="backButton" onclick="location.href= 'personal_info.html'">უკან</button>
+                       <button type="button" class="nextButton" onclick="saveExperience()">შემდეგი</button>
                     </div>
+                </form>
+                    
                 </div>
             </div>
         </div>
@@ -66,18 +71,16 @@
                 <div class="infoResult">
                     <h1> ანზორ მუმლაძე</h1>
                         <div class="displayFlex">
-                            <img class="email_icon" src="images/mail.svg" alt="">
-                            <img src="\" alt="">
-                            <p class="emailResult">  something@gmail.com</p>
+                            <img class="email_icon" src="images/mail.svg" alt="email icon">
+                            <p class="emailResult">  </p>
                         </div>
                         <div class="displayFlex">
-                            <img class="phone_icon" src="images/phone.svg" alt="">
-                            <img src="" alt="">
-                            <p class="phoneResult"> +99559888888</p>
+                            <img class="phone_icon" src="images/phone.svg" alt="phone icon">
+                            <p class="phoneResult"></p>
                         </div>
                     
                     <h2> ჩემს შესახებ</h2>
-                    <p class="myInfoResult"> ლორემ იპსუმ აწვდიდა ჩაეკიდა მისდია ქაღალდებს მეუბნებიან დაგითხარონ, ასხანდნენ სტუქსავდა გაიგონებდა გრეხილი ხელსაყრელი გადაწერილი. სიამედ ნაწერი დამიკეტეს ძირითადი მეტყვის მიუშვებს აუხელია. ჟღერს დასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა მოვყვე. ხელსაყრელი იჟევსკელ</p>
+                    <p class="myInfoResult"> </p>
                 </div>
                     <div class="imageResult">
                          <img class="me" src="images/anzor.jpg" alt="prinsezaa">
@@ -86,14 +89,20 @@
             <div class="result_section_2">
                     <div class="line4"></div>
                  <h2>გამოცდილება</h2>
-                    <h3> React developer </h3>
-                    <h3 class="resultDate"> <em>  2020-09-23 - 2020-09-23</em></h3>
-                     <p>ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>
+                    <h3> 
+                        <span id="positionResult"> react</span>
+                        <span id="companyResult"> microsoft</span>
+                    </h3>
+                    <h3> 
+                        <span> <em id="startResult"></em> </span>
+                        <span> <em id="endResult"></em> </span>
+                    </h3>
+                     <p id="descriptionResult"> </p>
                     <div class="line4"></div>
-                    <h2>გამოცდილება</h2>
+                    <h2>განათლება</h2>
                     <h3> React developer </h3>
                     <h3 class="resultDate"> <em>  2020-09-23 - 2020-09-23</em></h3>
-                    <p>ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>
+                    <p></p>
                 </div>
         </div>
     </div>

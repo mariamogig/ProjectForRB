@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>განათლება</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="flexHeight100">
         <div class="leftContainer">
             <div class="section_1">
                 <div class="iconBox">
-                    <div class="icon" onclick="location.href= 'experience.html'">
+                    <div class="icon" onclick="location.href= 'index.html'">
                         <img class="arrow" src="images/vector.png" alt="arrow">
                      </div>
                 </div>
@@ -26,37 +27,41 @@
               <div class="width_798px">
                 <form action="">
                     <div class="infoInputs">
-                        <label class="inputLable" for="school">სასწავლებელი</label><br>
-                        <input type="text" id="shcool" name="school" placeholder="სასწავლებელი"><br>
+                        <label class="inputLable" for="university">სასწავლებელი</label><br>
+                        <input onkeyup="handleInput(this,'university')" type="text" id="university" name="university" placeholder="სასწავლებელი"><br>
+                        <img class="errorSign" src="images/error.svg" alt="">
                         <p class="formInfo"> მინიმუმ 2 ასო</p>
                  </div>
                  <div class="spaceBetween">
                     <div class="shortInput">
                         <label for="degree"> ხარისხი</label> <br>
-                        <select name="choice"> 
-                            <option selected>აირჩიე ხარისხი</option>
-                            <option>ივანე ჯავახივილის სახელობის</option>
-                            <option >ილიას სახელმწიფო უნივერსიტეტი</option>
+                        <select onchange="handleInput(this,'degree')" required name="degree" id="degree"> 
+                            <option  selected value="">აირჩიე ხარისხი</option>
+                            <option value="თსუ">მაგისტრი </option>
+                            <option value="ილიაუნი">დოქტორი</option>
+                            <option value="ილიაუნი">ბაკალავრი</option>
                           </select>
                     </div>
                     <div class="shortInput">
                         <label for="date"> დამთავრების რიცხვი</label> <br>
-                        <input type="date" name="date" id="date">
+                        <input onchange="handleInput(this,'date')" type="date" name="date" id="date">
                     </div>
                 </div>  
                 <div class="infoInputs">
-                    <label for="aboutMe"> აღწერა</label> <br>
-                    <textarea class="textarea2" id="subject" name="subject" placeholder="განათლების აღწერა"></textarea>
+                    <label for="details"> აღწერა</label> <br>
+                    <textarea onkeyup="handleInput(this,'details')" class="textarea2" id="details" name="details" placeholder="განათლების აღწერა"></textarea>
+                    <img class="errorSign" src="images/error.svg" alt="">
             </div>
                     <div class="line3"></div>
                     <div class="addExperience">
                         <p>სხვა სასწავლებლის დამატება</p>
                     </div>
-                </form>
-                    <div class="next_back">
-                        <button class="backButton" onclick="location.href= 'experience.html'">უკან</button>
-                       <button class="nextButton" onclick="location.href= '#'">დასრულება</button>
+                    <div class="navigation-button">
+                        <button type="button" class="backButton" onclick="location.href= 'experience.html'">უკან</button>
+                       <button class="nextButton" onclick="saveEducation()">დასრულება</button>
                     </div>
+                </form>
+                    
                 </div>
             </div>
         </div>
@@ -87,10 +92,13 @@
                     <h3 class="resultDate"> <em>  2020-09-23 - 2020-09-23</em></h3>
                      <p>ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>
                     <div class="line4"></div>
-                    <h2>გამოცდილება</h2>
-                    <h3> React developer </h3>
-                    <h3 class="resultDate"> <em>  2020-09-23 - 2020-09-23</em></h3>
-                    <p>ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>
+                    <h2>განათლება</h2>
+                    <h3> 
+                        <span id="universityResult"> თსუ</span>
+                        <span id="degreeResult"> სტუდენტი</span>
+                    </h3>
+                   <span id="dateResult"></span>
+                    <p id="detailsResult">ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>
                 </div>
         </div>
     </div>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>პირადი ინფო</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="flexHeight100">
@@ -24,16 +25,18 @@
             <div class="line2"> </div>
             <div class="section_2">
               <div class="width_798px">
-                <form action="">
+                <form id="formId" action="">
                     <div class="spaceBetween">
                         <div class="shortInput">
                             <label for="name"> სახელი</label> <br>
-                            <input placeholder="ანზორ" type="text" name="name" id="name">
+                            <i class="myIcon"></i>
+                            <input onkeyup="handleInput(this,'name')" placeholder="ანზორ" type="text" name="name" id="name">
+                            <img class="errorSign" src="images/error.svg" alt="">
                             <p class="formInfo"> მინიმუმ 2 ასო, ქართული ასოებით</p>
                         </div>
                         <div class="shortInput">
                             <label for="surname"> გვარი</label> <br>
-                            <input placeholder="მუმლაძე" type="text" name="surname" id="surname">
+                            <input onkeyup="handleInput(this,'surname')" placeholder="მუმლაძე" type="text" name="surname" id="surname">
                             <p class="formInfo"> მინიმუმ 2 ასო, ქართული ასოებით</p>
                         </div>
                     </div>             
@@ -49,37 +52,40 @@
         </div>
                      <div class="infoInputs">
                          <label for="aboutMe"> ჩემს შესახებ (არასავალდებულო)</label> <br>
-                        <textarea id="subject" name="subject" placeholder="ზოგადი ინფო ჩემს შესახებ"></textarea>
+                        <textarea onkeyup="handleInput(this,'aboutMe')" id="aboutMe" name="aboutMe" placeholder="ზოგადი ინფო ჩემს შესახებ"></textarea>
                      </div>
                      <div class="infoInputs">
                          <label class="inputLable" for="email">ელ ფოსტა</label><br>
-                         <input type="text" id="email" name="email" placeholder="უნდა მთავრდებოდეს anzor666@redberry.ge-ით"><br>
+                         <input required onkeyup="handleInput(this,'email')" type="text" id="email" name="email" placeholder="უნდა მთავრდებოდეს anzor666@redberry.ge-ით"><br>
                          <p class="formInfo"> მინიმუმ 2 ასო, ქართული ასოებით</p>
                     </div>
                      <div class="infoInputs">
                          <label class="inputLable" for="tel">მობილურის ნომერი</label><br>
-                         <input type="tel" id="tel" name="tel" placeholder="+995 551 12 34 56"><br>
+                         <input onkeyup="handleInput(this,'tel')" type="tel" id="tel" name="tel" placeholder="+995 551 12 34 56"><br>
                           <p class="formInfo"> უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
                      </div>
                 </form>
-                 <button class="nextButton1" onclick="location.href='experience.html'">შემდეგი</button>
+                 <button type="button" class="nextButton1" onclick="savePersonalInfo()">შემდეგი</button>
              </div>
             </div>   
         </div>   
     <div class="resultsContainer">
         <div class="result_section_1">
             <div class="infoResult">
-                <h1> ანზორ მუმლაძე</h1>
+                <h1>
+                    <span id="nameResult"></span> 
+                    <span id="surnameResult"></span>
+                </h1>
                     <div>
                         <img src="\" alt="">
-                        <p class="emailResult"> something@gmail.com</p>
+                        <p id="emailResult" class="emailResult"> </p>
                     </div>
                     <div>
                         <img src="" alt="">
-                        <p class="phoneResult"> +99559888888</p>
+                        <p id="telResult" class="phoneResult"></p>
                     </div>
                     <h2> ჩემს შესახებ</h2>
-                    <p class="myInfoResult"> ლორემ იპსუმ აწვდიდა ჩაეკიდა მისდია ქაღალდებს მეუბნებიან დაგითხარონ, ასხანდნენ სტუქსავდა გაიგონებდა გრეხილი ხელსაყრელი გადაწერილი. სიამედ ნაწერი დამიკეტეს ძირითადი მეტყვის მიუშვებს აუხელია. ჟღერს დასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა მოვყვე. ხელსაყრელი იჟევსკელ</p>
+                    <p id="aboutMeResult" class="myInfoResult"> </p>
             </div>
                 <div class="imageResult">
                      <img class="me" src="images/anzor.jpg" alt="prinsezaa">
