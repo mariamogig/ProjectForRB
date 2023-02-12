@@ -31,12 +31,17 @@
                             <label for="name"> სახელი</label> <br>
                             <i class="myIcon"></i>
                             <input onkeyup="handleInput(this,'name')" placeholder="ანზორ" type="text" name="name" id="name">
-                            <img class="errorSign" src="images/error.svg" alt="">
+                            <div class="middle">
+                                <img class="errorSign" src="images/error.svg" alt="">
+                            </div>
                             <p class="formInfo"> მინიმუმ 2 ასო, ქართული ასოებით</p>
                         </div>
                         <div class="shortInput">
                             <label for="surname"> გვარი</label> <br>
                             <input onkeyup="handleInput(this,'surname')" placeholder="მუმლაძე" type="text" name="surname" id="surname">
+                            <div class="middle">
+                                <img class="errorSign" src="images/error.svg" alt="">
+                            </div>
                             <p class="formInfo"> მინიმუმ 2 ასო, ქართული ასოებით</p>
                         </div>
                     </div>             
@@ -62,6 +67,9 @@
                      <div class="infoInputs">
                          <label class="inputLable" for="tel">მობილურის ნომერი</label><br>
                          <input onkeyup="handleInput(this,'tel')" type="tel" id="tel" name="tel" placeholder="+995 551 12 34 56"><br>
+                         <div class="middle">
+                            <img class="errorSign" src="images/error.svg" alt="">
+                        </div>
                           <p class="formInfo"> უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
                      </div>
                 </form>
@@ -84,8 +92,8 @@
                         <img src="" alt="">
                         <p id="telResult" class="phoneResult"></p>
                     </div>
-                    <h2> ჩემს შესახებ</h2>
-                    <p id="aboutMeResult" class="myInfoResult"> </p>
+                    <h2 class="aboutMeTiTle"> ჩემს შესახებ</h2>
+                    <p id="aboutMeResult" > </p>
             </div>
                 <div class="imageResult">
                      <img class="me" src="images/anzor.jpg" alt="prinsezaa">

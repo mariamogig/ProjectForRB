@@ -35,11 +35,11 @@
                  <div class="spaceBetween">
                     <div class="shortInput">
                         <label for="degree"> ხარისხი</label> <br>
-                        <select onchange="handleInput(this,'degree')" required name="degree" id="degree"> 
+                        <select onchange="handleInput(this,'degree')" name="degree" id="degree"> 
                             <option  selected value="">აირჩიე ხარისხი</option>
-                            <option value="თსუ">მაგისტრი </option>
-                            <option value="ილიაუნი">დოქტორი</option>
-                            <option value="ილიაუნი">ბაკალავრი</option>
+                            <option value="Master">მაგისტრი </option>
+                            <option value="Doctor">დოქტორი</option>
+                            <option value="Bachelor">ბაკალავრი</option>
                           </select>
                     </div>
                     <div class="shortInput">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="navigation-button">
                         <button type="button" class="backButton" onclick="location.href= 'experience.html'">უკან</button>
-                       <button class="nextButton" onclick="saveEducation()">დასრულება</button>
+                       <button type="button" class="nextButton" onclick="saveEducation()">დასრულება</button>
                     </div>
                 </form>
                     
@@ -68,34 +68,44 @@
         <div class="resultsContainer">
             <div class="result_section_1">
                 <div class="infoResult">
-                    <h1> ანზორ მუმლაძე</h1>
+                    <h1>
+                        <span id="nameResult"></span> 
+                        <span id="surnameResult"></span>
+                    </h1>
                         <div>
                             <img src="\" alt="">
-                            <p class="emailResult">  something@gmail.com</p>
+                            <p id="emailResult" class="emailResult"> </p>
                         </div>
                         <div>
                             <img src="" alt="">
-                            <p class="phoneResult"> +99559888888</p>
+                            <p id="telResult" class="phoneResult"></p>
                         </div>
-                    
-                    <h2> ჩემს შესახებ</h2>
-                    <p class="myInfoResult"> ლორემ იპსუმ აწვდიდა ჩაეკიდა მისდია ქაღალდებს მეუბნებიან დაგითხარონ, ასხანდნენ სტუქსავდა გაიგონებდა გრეხილი ხელსაყრელი გადაწერილი. სიამედ ნაწერი დამიკეტეს ძირითადი მეტყვის მიუშვებს აუხელია. ჟღერს დასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა მოვყვე. ხელსაყრელი იჟევსკელ</p>
+                        <h2 class="aboutMeTiTle"> ჩემს შესახებ</h2>
+                        <p id="aboutMeResult" > </p>
                 </div>
                     <div class="imageResult">
                          <img class="me" src="images/anzor.jpg" alt="prinsezaa">
-                    </div>        
+                    </div>               
             </div>
             <div class="result_section_2">
                     <div class="line4"></div>
                  <h2>გამოცდილება</h2>
-                    <h3> React developer </h3>
-                    <h3 class="resultDate"> <em>  2020-09-23 - 2020-09-23</em></h3>
-                     <p>ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>
+                    <h3> 
+                        <span id="positionResult"> react</span>
+                        <span id="companyResult"> microsoft</span>
+                    </h3>
+                    <h3> 
+                        <span> <em id="startResult"></em> </span>
+                        <span> <em id="endResult"></em> </span>
+                    </h3>
+                     <p id="descriptionResult"> </p>
                     <div class="line4"></div>
                     <h2>განათლება</h2>
+                    <h3> React developer </h3>
+                    <p></p>
                     <h3> 
-                        <span id="universityResult"> თსუ</span>
-                        <span id="degreeResult"> სტუდენტი</span>
+                        <span id="universityResult"> </span>
+                        <span id="degreeResult"> </span>
                     </h3>
                    <span id="dateResult"></span>
                     <p id="detailsResult">ასაგველ გავტეხოთ მოგკლავ ახამებდა აუხელია შერეკილი, გაიგონებდა, მიგვეღწია ასხანდნენ. გლოცულობდი გეპატარავებათ ვინემ ტიტრები, ძირითადი პირმიბრუნებული გადააგდებდნენ გაიცა </p>

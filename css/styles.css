@@ -170,6 +170,7 @@ body {
     height: 48px;
     border: solid #BCBCBC 1px;
     margin-top: 8px;
+    display: inline-block;
 }
 textarea {
     width: 798px;
@@ -183,8 +184,9 @@ textarea {
 .textarea1 {
     height: 123px;
 }
-.infoInputs {
-    margin-bottom: ;
+.infoInputss {
+    margin-bottom: 30px;
+    display: inline-block;
 }
 .uploadPic {
     font-size: 16px;
@@ -212,8 +214,6 @@ textarea {
     align-items: center;
 
 }
-
-
 .spaceBetween {
     width: 798px;
     display: flex;
@@ -397,18 +397,17 @@ textarea {
     color: black;
 }
 .errorSign {
-    display: none;
     width: 21px;
     float: right;
     vertical-align: middle;
-    border: green solid 1px;
+    visibility: hidden;
 }
-.mari {
-    border: solid 1px yellow;
+.middle {
     display: inline-block;
+    vertical-align: middle;
 }
 .validation-error .errorSign {
-    display: block;
+    visibility: visible;
 }
 .validation-done input{
     border: 2px lightgreen solid;
@@ -418,4 +417,16 @@ textarea {
 }
 .validation-done textarea {
     border: lightgreen solid 2px;
+}
+.aboutMeTiTle {
+    display: none;
+}
+.title-result .aboutMeTiTle {
+    display: block;
+}
+.validation-done select{
+    border: 2px lightgreen solid;
+}
+.validation-error select{
+    border: red solid 2px;
 }

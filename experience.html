@@ -8,7 +8,7 @@
     <title>გამოცდილება</title>
     <script src="script.js"> </script>
 </head>
-<body >
+<body>
     <div class="flexHeight100">
         <div class="leftContainer">
             <div class="section_1">
@@ -42,10 +42,16 @@
                     <div class="shortInput">
                         <label for="start"> დაწყების რიცხვი</label> <br>
                         <input onkeyup="handleInput(this,'start')" type="date" name="start" id="start">
+                        <div class="middle">
+                            <img class="errorSign" src="images/error.svg" alt="">
+                        </div>
                     </div>
                     <div class="shortInput">
                         <label for="end"> დამთავრების რიცხვი</label> <br>
                         <input onkeyup="handleInput(this,'end')" type="date" name="end" id="end">
+                        <div class="middle">
+                            <img class="errorSign" src="images/error.svg" alt="">
+                        </div>
                     </div>
                 </div>  
                 <div class="infoInputs">
@@ -69,22 +75,24 @@
         <div class="resultsContainer">
             <div class="result_section_1">
                 <div class="infoResult">
-                    <h1> ანზორ მუმლაძე</h1>
-                        <div class="displayFlex">
-                            <img class="email_icon" src="images/mail.svg" alt="email icon">
-                            <p class="emailResult">  </p>
+                    <h1>
+                        <span id="nameResult"></span> 
+                        <span id="surnameResult"></span>
+                    </h1>
+                        <div>
+                            <img src="\" alt="">
+                            <p id="emailResult" class="emailResult"> </p>
                         </div>
-                        <div class="displayFlex">
-                            <img class="phone_icon" src="images/phone.svg" alt="phone icon">
-                            <p class="phoneResult"></p>
+                        <div>
+                            <img src="" alt="">
+                            <p id="telResult" class="phoneResult"></p>
                         </div>
-                    
-                    <h2> ჩემს შესახებ</h2>
-                    <p class="myInfoResult"> </p>
+                        <h2 class="aboutMeTiTle"> ჩემს შესახებ</h2>
+                        <p id="aboutMeResult" > </p>
                 </div>
                     <div class="imageResult">
                          <img class="me" src="images/anzor.jpg" alt="prinsezaa">
-                    </div>        
+                    </div>               
             </div>
             <div class="result_section_2">
                     <div class="line4"></div>
