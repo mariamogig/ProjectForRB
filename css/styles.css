@@ -231,7 +231,7 @@ textarea {
     display: inline-block;
 }
 .shortInput {
-    margin: 0;
+    margin: 0px;
 }
 textarea {
     border: solid #BCBCBC 1px;
@@ -409,14 +409,17 @@ textarea {
 .validation-error .errorSign {
     visibility: visible;
 }
-.validation-done input{
-    border: 2px lightgreen solid;
-}
 .validation-error textarea{
     border: red solid 2px;
 }
 .validation-done textarea {
     border: lightgreen solid 2px;
+}
+.validation-done select{
+    border: 2px lightgreen solid;
+}
+.validation-done input{
+    border: 2px lightgreen solid;
 }
 .aboutMeTiTle {
     display: none;
@@ -424,9 +427,10 @@ textarea {
 .title-result .aboutMeTiTle {
     display: block;
 }
-.validation-done select{
-    border: 2px lightgreen solid;
-}
+
 .validation-error select{
     border: red solid 2px;
+}
+.decorationNone {
+    all: unset;
 }

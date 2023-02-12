@@ -26,7 +26,7 @@
             <div class="section_2">
               <div class="width_798px">
                 <form action="">
-                    <div class="infoInputs">
+                    <div id="test" class="infoInputs">
                         <label class="inputLable" for="university">სასწავლებელი</label><br>
                         <input onkeyup="handleInput(this,'university')" type="text" id="university" name="university" placeholder="სასწავლებელი"><br>
                         <img class="errorSign" src="images/error.svg" alt="">
@@ -54,11 +54,11 @@
             </div>
                     <div class="line3"></div>
                     <div class="addExperience">
-                        <p>სხვა სასწავლებლის დამატება</p>
+                    <button class="decorationNone" onclick="addInputs()" type="button">სხვა სასწავლებლის დამატება</button>
                     </div>
                     <div class="navigation-button">
-                        <button type="button" class="backButton" onclick="location.href= 'experience.html'">უკან</button>
-                       <button type="button" class="nextButton" onclick="saveEducation()">დასრულება</button>
+                        <button type="button" class="backButton" >უკან</button>
+                       <button type="button" onclick="saveEducation()" class="nextButton" >დასრულება</button>
                     </div>
                 </form>
                     
@@ -100,7 +100,7 @@
                     </h3>
                      <p id="descriptionResult"> </p>
                     <div class="line4"></div>
-                    <h2></h2>
+                    <h2>განათლება</h2>
                     <h3> </h3>
                     <p></p>
                     <h3> 

@@ -1,6 +1,6 @@
 function handleInput(element,target) {
     const value = element.value;
-    document.querySelector(`#${target}Result`).textContent = value;
+    document.querySelector(`#${target}Result`).textContent = value;    
 }
 function savePersonalInfo() {
     const domainName = 'redberry.ge';
@@ -138,4 +138,11 @@ window.onload = function() {
         document.querySelector(`#${key}`).value = value;
         document.querySelector(`#${key}Result`).textContent = value;
     }
+}
+
+function addInputs() {
+    const container = document.getElementById('test');
+    let input = document.createElement('input');
+    input.placeholder = "სასწავლებელი";
+    container.appendChild(input);
 }
