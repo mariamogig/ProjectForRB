@@ -44,8 +44,8 @@ function savePersonalInfo() {
     const data = { name, surname, email,  tel, aboutMe }
     const mergeObj = {...savedInfo, ...data};
     localStorage.setItem('registrationDate', JSON.stringify(mergeObj));
-    console.log(data);
-    
+    console.log(mergeObj);
+
     if(email.length >= 1 && (email.indexOf(domainName) + domainName.length) == email.length && surname.length >= 2 && name.length >= 2 && (tel.startsWith("+995")) && tel.length > 12 && tel.length <14)  {
         document.location.href = "experience.html";
     }  
@@ -98,6 +98,9 @@ function saveExperience() {
     const mergeObj = {...savedInfo, ...data};
     localStorage.setItem('registrationDate', JSON.stringify(mergeObj));
     console.log(data);
+    if(position.length >= 2 && company.length >= 2 && description.length >= 1 && start!= "" && end != ""){
+        document.location.href = "education.html";
+    }
 }   
 function saveEducation() {
     const univeristy = document.querySelector('#university').value;
@@ -139,24 +142,33 @@ function saveEducation() {
     const mergeObj = {...savedInfo, ...data};
     localStorage.setItem('registrationDate', JSON.stringify(mergeObj));
     console.log(data);
-}
-document.onload = function() {
-    const data = JSON.parse(localStorage.getItem('registrationDate'));
 
-    for (const [key, value] of Object.entries(data)) {
-        console.log(`${key}: ${value}`);
-        if(document.querySelector(`#${key}`)?.length > 0){
-            document.querySelector(`#${key}`).value = value;
-        }
-        if(document.querySelector(`#${key}Result`)?.length > 0) {
-            document.querySelector(`#${key}Result`).textContent = value;
-        }
+    if(univeristy.length >= 2 && details.length > 0 && date != "" && degree != ""){
+        document.location.href = "finalResume.html";
     }
 }
+document.addEventListener("DOMContentLoaded", function(event) {
+     const data = JSON.parse(localStorage.getItem('registrationDate'));
+     console.log('iii');
+     console.log(data);
 
-function addInputs() {
-    const container = document.getElementById('addInput');
+for (const [key, value] of Object.entries(data)) {
+    console.log(`${key}: ${value}`);
+    document.getElementById(`${key}`).value = value;
+    document.getElementById(`${key}Result`).textContent = value;
+    }
+});
+
+function addUni() {
+    const addUni = document.getElementById('addInput');
     let input = document.createElement('input');
     input.placeholder = "სასწავლებელი";
-    container.appendChild(input);
+    addUni.appendChild(input);
 }
+function addWork() {
+    const addWork = document.getElementById('addWork');
+    let input = document.createElement('input');
+    input.placeholder = "გამოცდილება";
+    addWork.appendChild(input);
+}
+    

@@ -26,7 +26,7 @@
             <div class="section_2">
                 <div class="width_798px">
                 <form action="">
-                    <div class="infoInputs">
+                    <div id="addWork" class="infoInputs">
                         <label class="inputLable" for="position">თანამდებობა</label><br>
                         <input onkeyup="handleInput(this,'position')" type="text" id="position" name="position" placeholder="დიზაინერი, დეველოპერი ა.შ"><br>
                         <img class="errorSign" src="images/error.svg" alt="">
@@ -61,7 +61,7 @@
             </div>
                     <div class="line3"></div>
                     <div class="addExperience">
-                        <p>სხვა სასწავლებლის დამატება</p>
+                        <button class="decorationNone" onclick="addWork()" type="button">სხვა გამოცდილების დამატება</button>
                     </div>
                     <div class="navigation-button">
                         <button type="button" class="backButton" onclick="location.href= 'personal_info.html'">უკან</button>
