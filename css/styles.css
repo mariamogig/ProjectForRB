@@ -20,7 +20,6 @@
 a {
     text-decoration: none;
 }
-
 html {
     height: 100%;
     margin: 0;
@@ -77,7 +76,6 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
-    
 }
 .mainButton h2 {
     font-size: 20px;
@@ -308,7 +306,6 @@ textarea {
     justify-content: space-between;
     cursor: pointer;
     margin-top: 180px;
-
 }
 .backButton, .nextButton {
     background-color: #6B40E3;
