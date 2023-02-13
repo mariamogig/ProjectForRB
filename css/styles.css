@@ -421,13 +421,6 @@ textarea {
 .validation-done input{
     border: 2px lightgreen solid;
 }
-.aboutMeTiTle {
-    display: none;
-}
-.title-result .aboutMeTiTle {
-    display: block;
-}
-
 .validation-error select{
     border: red solid 2px;
 }
