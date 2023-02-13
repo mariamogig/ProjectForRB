@@ -427,3 +427,16 @@ textarea {
 .decorationNone {
     all: unset;
 }
+.mailIcon {
+    display: flex;
+    margin-bottom: 15px;
+}
+.mailIcon img {
+    margin-right: 10px;
+}
+.phoneIcon {
+    display: flex;
+}
+.phoneIcon img {
+    margin-right: 10px;
+}

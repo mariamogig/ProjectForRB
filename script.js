@@ -65,11 +65,11 @@ function saveExperience() {
         document.querySelector('#start').parentElement.classList.add('validation-done');
     }
     if(end == "") {
-        document.querySelector('#start').parentElement.classList.add('validation-error');
-        document.querySelector('#start').parentElement.classList.remove('validation-done');
+        document.querySelector('#end').parentElement.classList.add('validation-error');
+        document.querySelector('#end').parentElement.classList.remove('validation-done');
     } else {
-        document.querySelector('#start').parentElement.classList.remove('validation-error');
-        document.querySelector('#start').parentElement.classList.add('validation-done');
+        document.querySelector('#end').parentElement.classList.remove('validation-error');
+        document.querySelector('#end').parentElement.classList.add('validation-done');
     }
     if(position.length >= 2) {
         document.querySelector('#position').parentElement.classList.remove('validation-error');

@@ -13,7 +13,7 @@
         <div class="leftContainer">
             <div class="section_1">
                 <div class="iconBox">
-                    <div class="icon" onclick="location.href= 'index.html'">
+                    <div class="icon"  onclick="location.href= 'index.html'">
                         <img class="arrow" src="images/vector.png" alt="arrow">
                      </div>
                 </div>
@@ -29,13 +29,11 @@
                     <div id="addWork" class="infoInputs">
                         <label class="inputLable" for="position">თანამდებობა</label><br>
                         <input onkeyup="handleInput(this,'position')" type="text" id="position" name="position" placeholder="დიზაინერი, დეველოპერი ა.შ"><br>
-                        <img class="errorSign" src="images/error.svg" alt="">
                         <p class="formInfo"> მინიმუმ 2 ასო</p>
                     </div>
                     <div class="infoInputs">
                         <label class="inputLable" for="company">დამსაქმებელი</label><br>
                         <input onkeyup="handleInput(this,'company')" type="text" id="company" name="company" placeholder="დამსაქმებელი"><br>
-                        <img class="errorSign" src="images/error.svg" alt="">
                         <p class="formInfo"> მინიმუმ 2 ასო</p>
                     </div>
                  <div class="spaceBetween">
@@ -43,22 +41,21 @@
                         <label for="start"> დაწყების რიცხვი</label> <br>
                         <input onchange="handleInput(this,'start')" type="date" name="start" id="start">
                         <div class="middle">
-                            <img class="errorSign" src="images/error.svg" alt="">
+                            <img class="errorSign" src="images/error.svg" alt="error">
                         </div>
                     </div>
                     <div class="shortInput">
                         <label for="end"> დამთავრების რიცხვი</label> <br>
                         <input onchange="handleInput(this,'end')" type="date" name="end" id="end">
                         <div class="middle">
-                            <img class="errorSign" src="images/error.svg" alt="">
+                            <img class="errorSign" src="images/error.svg" alt="error">
                         </div>
                     </div>
                 </div>  
                 <div class="infoInputs">
                     <label for="description"> აღწერა</label> <br>
                     <textarea onkeyup="handleInput(this,'description')" class="textarea1" id="description" name="description" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"></textarea>
-                    <img class="errorSign" src="images/error.svg" alt="">
-            </div>
+                </div>
                     <div class="line3"></div>
                     <div class="addExperience">
                         <button class="decorationNone" onclick="addWork()" type="button">სხვა გამოცდილების დამატება</button>
@@ -79,12 +76,12 @@
                         <span id="nameResult"></span> 
                         <span id="surnameResult"></span>
                     </h1>
-                        <div>
-                            <img src="\" alt="">
+                        <div class="mailIcon">
+                            <img src="images/mail.svg" alt="email">
                             <p id="emailResult" class="emailResult"> </p>
                         </div>
-                        <div>
-                            <img src="" alt="">
+                        <div class="phoneIcon">
+                            <img src="images/phone.svg" alt="phone">
                             <p id="telResult" class="phoneResult"></p>
                         </div>
                         <h2 class="aboutMeTiTle"> ჩემს შესახებ</h2>
